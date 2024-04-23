@@ -1,0 +1,898 @@
+
+
+/* pocetak nav bar */
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: cursive;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+/* NAVBAR STYLING STARTS */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-image: linear-gradient(to bottom right, black, #1E2852);
+    color: #fff;
+}
+.nav-links a {
+    color: #fff;
+}
+/* LOGO */
+.logo {
+
+}
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+.menu li:hover {
+    background-color: #1E2852;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+.menu li {
+    padding: 2px 14px;
+}
+/* DROPDOWN MENU */
+.buy-game {
+    position: relative;
+    background: orangered;
+    color: #182141;
+    transition: right 0.25s ease-in-out;
+}
+.buy-game:focus-within .dropdown{
+    opacity: 1;
+    display: block;
+}
+
+.dropdown {
+    background-image: linear-gradient(to bottom right, #1E2852, black);
+    padding: 1em 0;
+    position: absolute; /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 8px;
+    top: 25px;
+    right: 0px;
+    z-index: 1;
+}
+.dropdown li + li {
+    margin-top: 10px;
+}
+.dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+}
+.dropdown li:hover {
+    background-color: #1E2852;
+}
+.buy-game:hover .dropdown {
+    display: block;
+
+}
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+    display: none;
+}
+/*HAMBURGER MENU*/
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 960px) {
+    .menu {
+        display:none;
+        position: absolute;
+        background-color:#182141;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+        z-index: 5;
+    }
+    .menu li:hover {
+        display: inline-block;
+        background-color:#1E2852;
+        transition: 0.3s ease;
+    }
+    .menu li + li {
+        margin-top: 12px;
+    }
+    input[type=checkbox]:checked ~ .menu{
+        display: block;
+    }
+    .hamburger {
+        display: block;
+    }
+    .buy-game:hover .dropdown {
+        display: block;
+
+    }
+    .dropdown {
+        left: 40%;
+        top: 20px;
+        transform: translateX(35%);
+        right: 0px;
+        z-index: 10;
+    }
+    .dropdown li:hover {
+        background-color: #1E2852;
+    }
+}
+/* kraj nav bar */
+
+/*footer*/
+.footer-basic {
+    padding:40px 0;
+    background-image: linear-gradient(to bottom right, #1E2852, black);
+    color: white;
+    position: relative;
+}
+
+.footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+}
+
+.footer-basic li {
+    padding:0 10px;
+}
+
+.footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+    opacity:1;
+}
+
+.footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+}
+.footer-basic .platform > img {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+}
+.footer-basic .platform {
+    text-align:center;
+    padding-bottom:15px;
+}
+.footer-basic .simbol {
+    width: 6%;
+    height: 6%;
+}
+.footer-basic .social > a:hover {
+    opacity:0.9;
+}
+
+.footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+}
+
+/* zavrsetak footer*/
+
+@font-face {
+    font-family: ethno;
+    src: url('../media/ethnocentric_rg.otf');
+}
+body{
+    background-image: linear-gradient(to bottom right, #1E2852, black);
+}
+#parent1{
+    width: 84%;
+    height: 100%;
+    left: 8%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 19% 19% 19% 19%;
+    grid-template-rows: 1fr;
+    grid-column-gap: 8%;
+    grid-row-gap: 20px;
+
+}
+
+.grid-item{
+    text-align: center;
+    width: 100%;
+    height: 500px;
+    background-image: linear-gradient(to bottom right, #1E2852, black);
+    cursor: pointer;
+}
+.img-grid{
+    width: 100%;
+    height: 76%;
+    position: relative;
+}
+.text-grid{
+    width: 100%;
+    height: 30%;
+    position: relative;
+}
+.text-grid h1{
+    color: white;
+    font-family: ethno;
+    font-size: x-large;
+}
+.grid-item:hover{
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transition: transform .5s ease;
+}
+#auto1{
+    background-image: url("../media/aftershock.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#auto2 {
+    background-image: url("../media/batman1.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#auto3{
+    background-image: url("../media/bttf.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#auto4{
+    background-image: url("../media/dodge.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+#auto5{
+    background-image: url("../media/esper.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#auto6{
+    background-image: url("../media/ghostbuster.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#auto7{
+    background-image: url("../media/jurrasic.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#auto8{
+    background-image: url("../media/knight rider.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#auto9{
+    background-image: url("../media/maderer.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#auto10{
+    background-image: url("../media/masamune.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#auto11{
+    background-image: url("../media/mclaren.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#auto12{
+    background-image: url("../media/nissan.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#auto13{
+    background-image: url("../media/proteus.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#auto14{
+    background-image: url("../media/skull.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#auto15{
+    background-image: url("../media/triton.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#auto16{
+    background-image: url("../media/vulcan.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#Naslov h1{
+    color: white;
+    font-family: ethno;
+    text-align: center;
+}
+#Kat1 h1{
+    color: white;
+    font-family: ethno;
+    text-align: center;
+}
+#btw1 h1{
+    color: white;
+    font-family: ethno;
+    text-align: center;
+}
+#parent2{
+    width: 84%;
+    height: 100%;
+    left: 8%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 19% 19% 19% 19%;
+    grid-template-rows: 1fr;
+    grid-column-gap: 8%;
+    grid-row-gap: 20px;
+
+}
+.margina{
+    width: 100%;
+    height: 20px;
+    background-color: #182141;
+}
+
+#dc{
+    background-image: url("../media/dc.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#fif{
+    background-image: url("../media/f&f.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#hotwheels{
+    background-image: url("../media/hotwheels.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#Tripletreat{
+    background-image: url("../media/triplethreat.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#credh h1{
+    color: white;
+    font-family: ethno;
+    text-align: center;
+}
+#parent3{
+    width: 84%;
+    height: 100%;
+    left: 8%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 19% 19% 19% 19%;
+    grid-template-rows: 1fr;
+    grid-column-gap: 8%;
+    grid-row-gap: 20px;
+}
+#kl1{
+    background-image: url("../media/keys1.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#kl5{
+    background-image: url("../media/keys5.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#kl10{
+    background-image: url("../media/keys10.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#kl20{
+    background-image: url("../media/keys20.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+@media (max-width: 1500px) {
+    #parent1{
+        grid-template-columns: 26.6% 26.6% 26.6%;
+        grid-template-rows: 1fr;
+        grid-column-gap: 10%;
+        grid-row-gap: 20px;
+        left: 10%;
+        right: 0;
+    }
+    #parent2{
+        grid-template-columns: 26.6% 26.6% 26.6%;
+        grid-template-rows: 1fr;
+        grid-column-gap: 10%;
+        grid-row-gap: 20px;
+        left: 10%;
+        right: 0;
+    }
+    #parent3{
+        grid-template-columns: 26.6% 26.6% 26.6%;
+        grid-template-rows: 1fr;
+        grid-column-gap: 10%;
+        grid-row-gap: 20px;
+        left: 10%;
+        right: 0;
+    }
+    .text-grid h1{
+        font-size: medium;
+    }
+}
+
+@media (max-width: 1150px) {
+    #parent1{
+        grid-template-columns: 40% 40%;
+        grid-template-rows: 1fr;
+        grid-column-gap: 20%;
+        grid-row-gap: 20px;
+        left: 10%;
+        right: 0;
+    }
+    #parent2{
+        grid-template-columns: 40% 40%;
+        grid-template-rows: 1fr;
+        grid-column-gap: 20%;
+        grid-row-gap: 20px;
+        left: 10%;
+        right: 0;
+    }
+    #parent3{
+        grid-template-columns: 40% 40%;
+        grid-template-rows: 1fr;
+        grid-column-gap: 20%;
+        grid-row-gap: 20px;
+        left: 10%;
+        right: 0;
+    }
+    .text-grid h1{
+        font-size: medium;
+    }
+}
+@media (max-width: 700px) {
+    #parent1{
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 1fr;
+        grid-column-gap: 10%;
+        grid-row-gap: 20px;
+        left: 10%;
+        right: 0;
+    }
+    #parent2{
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 1fr;
+        grid-column-gap: 10%;
+        grid-row-gap: 20px;
+        left: 10%;
+        right: 0;
+    }
+    #parent3{
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 1fr;
+        grid-column-gap: 10%;
+        grid-row-gap: 20px;
+        left: 10%;
+        right: 0;
+    }
+    .text-grid h1{
+        font-size: medium;
+    }
+}
+
+@media (max-width: 550px) {
+    #parent1{
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr;
+        grid-column-gap: 10%;
+        grid-row-gap: 20px;
+        right: 0;
+    }
+    #parent2{
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr;
+        grid-column-gap: 10%;
+        grid-row-gap: 20px;
+        right: 0;
+    }
+    #parent3{
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr;
+        grid-column-gap: 10%;
+        grid-row-gap: 20px;
+        right: 0;
+    }
+    .text-grid h1{
+        font-size: medium;
+    }
+}
+@media (max-width: 1500px) {
+    .text-grid h1{
+        font-size: large;
+    }
+}
+.popup{
+    position: sticky;
+    z-index: 99;
+    background-image: linear-gradient(to bottom right, black, #1E2852);
+    display: none;
+    left: 20%;
+    width: 60%;
+    top: 10%;
+    height: 800px;
+}
+.textPopup h1{
+    font-family: ethno;
+    font-size: xxx-large;
+    color: white;
+}
+.textPopup p{
+    font-family: ethno;
+    font-size: xxx-large;
+    color: white;
+    font-size: large;
+}
+.textPopup{
+    margin: 1%;
+}
+.iks{
+    background: url("../media/x-exit.png") center center no-repeat;
+    background-size: contain;
+    right: -3%;
+    top: -3%;
+    width: 8%;
+    height: 8%;
+    position: absolute;
+    z-index: 100;
+}
+.inline .buy-btn{
+    width: 20%;
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    right: 0%;
+    height: 100%;
+}
+.inline .buy-btn a{
+    background-color: yellow;
+    box-shadow: 0 5px 0 #8B8000;
+    color: #191414;
+    padding: 1em 1.5em;
+    position: relative;
+    text-decoration: none;
+    font-family: ethno;
+    font-size: x-large;
+    text-transform: uppercase;
+}
+.inline{
+    height: 10%;
+    width: 90%;
+    position: relative;
+    margin: 5%;
+}
+.inline .buy-btn a:hover{
+    background-color: #8B8000;
+    cursor: pointer;
+}
+.inline .buy-btn a:active{
+    box-shadow: none;
+    top: 5px;
+}
+.inline .cijena{
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    height: 100%;
+}
+.cijena h1{
+    font-family: ethno;
+    font-size: xxx-large;
+    color: yellow;
+    text-align: right;
+}
+#img1{
+    background: url("../media/rl-afteshock.jpg") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img2{
+    background: url("../media/rl-batmobil.webp") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img3{
+    background: url("../media/rl-brdf.webp") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img4{
+    background: url("../media/rl-dodge-charger.jpg") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img5{
+    background: url("../media/rl-esper.webp") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img6{
+    background: url("../media/el-ghost-buster.jpg") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img7{
+    background: url("../media/rl-jurassic.jpg") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img8{
+    background: url("../media/rl-knight-rider.jpg") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img9{
+    background: url("../media/rl-marauder.webp") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img10{
+    background: url("../media/rl-masamune.jpg") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img11{
+    background: url("../media/rl-mclaren.jpg") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img12{
+    background: url("../media/rl-nissan.webp") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img13{
+    background: url("../media/rl-proteus.webp") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img14{
+    background: url("../media/rl-bone.webp") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img15{
+    background: url("../media/rl-triton.webp") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img16{
+    background: url("../media/rl-vulcan.webp") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img17{
+    background: url("../media/rl-dc.jpg") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img18{
+    background: url("../media/rl-fandf.jpg") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img19{
+    background: url("../media/rl-twin.webp") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img20{
+    background: url("../media/triplethreat.png") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img21{
+    background: url("../media/rl-keys.jpg") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img22{
+    background: url("../media/rl-keys.jpg") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img23{
+    background: url("../media/rl-keys.jpg") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+#img24{
+    background: url("../media/rl-keys.jpg") center center scroll no-repeat;
+    background-size: cover;
+    left: 1%;
+    width: 98%;
+    top: 1%;
+    height: 50%;
+    position: relative;
+}
+
+@media (max-width: 1400px) {
+    .popup{
+        width: 80%;
+        left: 10%;
+        height: 700px;
+    }
+}
+@media (max-width: 800px) {
+    .inline .buy-btn{
+        width: 47.5%;
+        text-align: left;
+    }
+    .inline .izmedu{
+        width: 5%;
+    }
+    .inline .cijena{
+        width: 47.5%;
+    }
+    .popup{
+        top: 5%;
+    }
+}
+@media (max-width: 660px) {
+    .inline .cijena h1{
+        font-size: xx-large;
+    }
+}
+@media (max-width: 550px) {
+    .textPopup p{
+        font-size: medium;
+    }
+    .textPopup h1{
+        font-size: x-large;
+    }
+}
+@media (max-width: 390px) {
+    .inline .cijena h1{
+        font-size: x-large;
+    }
+    .inline .buy-btn a{
+        font-size: large;
+    }
+}

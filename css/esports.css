@@ -1,0 +1,600 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: cursive;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+/* NAVBAR STYLING STARTS */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-image: linear-gradient(to bottom right, black, #1E2852);
+    color: #fff;
+}
+.nav-links a {
+    color: #fff;
+}
+/* LOGO */
+.logo {
+
+}
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+.menu li:hover {
+    background-color: #1E2852;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+.menu li {
+    padding: 2px 14px;
+}
+/* DROPDOWN MENU */
+.buy-game {
+    position: relative;
+    background: orangered;
+    color: #182141;
+    transition: right 0.25s ease-in-out;
+}
+.buy-game:focus-within .dropdown{
+    opacity: 1;
+    display: block;
+}
+
+.dropdown {
+    background-image: linear-gradient(to bottom right, #1E2852, black);
+    padding: 1em 0;
+    position: absolute; /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 8px;
+    top: 25px;
+    right: 0px;
+    z-index: 1;
+}
+.dropdown li + li {
+    margin-top: 10px;
+}
+.dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+}
+.dropdown li:hover {
+    background-color: #1E2852;
+}
+.buy-game:hover .dropdown {
+    display: block;
+
+}
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+    display: none;
+}
+/*HAMBURGER MENU*/
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 960px) {
+    .menu {
+        display:none;
+        position: absolute;
+        background-color:#182141;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+        z-index: 5;
+    }
+    .menu li:hover {
+        display: inline-block;
+        background-color:#1E2852;
+        transition: 0.3s ease;
+    }
+    .menu li + li {
+        margin-top: 12px;
+    }
+    input[type=checkbox]:checked ~ .menu{
+        display: block;
+    }
+    .hamburger {
+        display: block;
+    }
+    .buy-game:hover .dropdown {
+        display: block;
+
+    }
+    .dropdown {
+        z-index: 10;
+    }
+    .dropdown li:hover {
+        background-color: #1E2852;
+    }
+}
+/* kraj nav bar */
+
+/*footer*/
+.footer-basic {
+    padding:40px 0;
+    background-image: linear-gradient(to bottom right, #1E2852, black);
+    color: white;
+    position: relative;
+}
+
+.footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+}
+.footer-basic li {
+    padding:0 10px;
+}
+
+.footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+    opacity:1;
+}
+
+.footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+}
+.footer-basic .platform > img {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+}
+.footer-basic .platform {
+    text-align:center;
+    padding-bottom:15px;
+}
+.footer-basic .simbol {
+    width: 6%;
+    height: 6%;
+}
+.footer-basic .social > a:hover {
+    opacity:0.9;
+}
+
+.footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+}
+
+/* zavrsetak footer*/
+@font-face {
+    font-family: ethno;
+    src: url('../media/ethnocentric_rg.otf');
+}
+.video{
+    position: relative;
+    width: 100%;
+    height: 30%;
+}
+body{
+    background-image: linear-gradient(to bottom right, #1E2852, black);
+}
+#naslov{
+    width: 100%;
+    height: 5%;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+}
+#naslov h1{
+    font-family: ethno;
+    color: cyan;
+}
+.intro{
+    width: 100%;
+    height: 20%;
+    position: relative;
+    text-align: center;
+}
+.intro h2{
+    font-family: ethno;
+    color: white;
+}
+.parent{
+    width: 86%;
+    height: 60%;
+    margin: 7%;
+    margin-bottom: 5%;
+    margin-top: 3%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-template-rows: 1fr;
+    grid-column-gap: 2%;
+    grid-row-gap: 20px;
+}
+.grid-item{
+    text-align: center;
+    width: 100%;
+    height: 500px;
+    background-image: linear-gradient(to bottom right, #1E2852, black);
+    cursor: pointer;
+}
+.item{
+    position: relative;
+
+}
+.item h1{
+    font-family: ethno;
+    color: white;
+    font-size: 20px;
+}
+.img{
+    height: 70%;
+    position: relative;
+}
+#img1{
+    background: url('../media/rl-elcs1.webp') center center scroll no-repeat;
+    background-size: cover;
+}
+#img2{
+    background: url('../media/rl-elcs2.webp') center center scroll no-repeat;
+    background-size: cover;
+}
+#img3{
+    background: url('../media/rl-elcs3.webp') center center scroll no-repeat;
+    background-size: cover;
+}
+.news{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 3%;
+}
+.news h1{
+    font-family: ethno;
+    color: cyan;
+    font-size: xxx-large;
+}
+@media (max-width: 1600px) {
+    .parent{
+        width: 80%;
+        height: 60%;
+        margin: 10%;
+        margin-bottom: 5%;
+        margin-top: 3%;
+        position: relative;
+        display: grid;
+        grid-template-columns: 49% 49%;
+        grid-template-rows: 1fr;
+        grid-column-gap: 2%;
+        grid-row-gap: 20px;
+    }
+    .grid-item{
+        text-align: center;
+        width: 100%;
+        height: 500px;
+        background-image: linear-gradient(to bottom right, #1E2852, black);
+        cursor: pointer;
+    }
+}
+@media (max-width: 1100px) {
+    .parent{
+        width: 80%;
+        height: 60%;
+        margin: 10%;
+        margin-bottom: 5%;
+        margin-top: 3%;
+        position: relative;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr;
+        grid-column-gap: 2%;
+        grid-row-gap: 20px;
+    }
+    .grid-item{
+        text-align: center;
+        width: 100%;
+        height: 500px;
+        background-image: linear-gradient(to bottom right, #1E2852, black);
+        cursor: pointer;
+    }
+}
+@media (max-width: 580px) {
+    .intro h2{
+        font-size: large;
+    }
+}
+@media (max-width: 500px) {
+    .item h1{
+        font-size: large;
+    }
+}
+@media (max-width: 350px) {
+    .item h1{
+        font-size: medium;
+    }
+}
+#parent2{
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+#parent2 .tekstic{
+    position: absolute;
+    right: 0%;
+    width: 40%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, #1E2852, black);
+    text-align: center;
+}
+#parent2 .tekstic h1{
+    font-family: ethno;
+    position: relative;
+    color: white;
+    margin: 3%;
+}
+#parent2 .tekstic p{
+    font-family: ethno;
+    position: relative;
+    color: white;
+    font-size: medium;
+    margin: 5%;
+}
+#parent2 .tekstic a{
+    font-family: ethno;
+    color: white;
+    position: relative;
+    font-weight: bolder;
+    font-size: x-large;
+    margin: 10%;
+    background-color: orange;
+    box-shadow: 0 5px 0 lightskyblue;
+    padding: 1em 1.5em;
+}
+#parent2 .tekstic a:hover {
+    background-color: lightskyblue;
+}
+#parent2 .slika{
+    width: 60%;
+    height: 100%;
+    position: relative;
+}
+#slika1{
+    background: url('../media/rl-esports.webp') center center no-repeat;
+    background-size: cover;
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #parent2{
+        height: 1000px;
+    }
+    #parent2 .tekstic {
+        width: 100%;
+        height: 50%;
+        top: 50%;
+    }
+    #parent2 .slika{
+        width: 100%;
+        height: 50%;
+    }
+}
+@media (max-width: 1000px) {
+    #parent2 .tekstic p{
+        font-size: small;
+    }
+}
+@media (max-width: 500px) {
+    #parent2 .tekstic h1{
+        font-size: x-large;
+    }
+    #parent2 .tekstic p{
+        font-size: small;
+    }
+    #parent2 .tekstic a{
+        font-size: medium;
+    }
+}
+@media (max-width: 300px) {
+    #parent2 .tekstic p{
+        font-size: small;
+    }
+}
+#link{
+    overflow-x: visible;
+}
+#fanrewards{
+    position: relative;
+    margin: 5%;
+    height: 290px;
+    text-align: center;
+}
+#fanrewards h1{
+    font-family: ethno;
+    color: darkorange;
+}
+#fanrewards p{
+    font-family: ethno;
+    color: white;
+    font-size: large;
+}
+#fanrewards a{
+    font-family: ethno;
+    color: white;
+    background-color: orange;
+    box-shadow: 0 5px 0 lightskyblue;
+    padding: 1em 1.5em;
+    font-size: x-large;
+    position: relative;
+    top: 10%;
+}
+#fanrewards a:hover{
+    background-color: lightskyblue;
+}
+#fanrewards #ostalo{
+    position: relative;
+}
+#fanrewards #link{
+    position: relative;
+    top: 10%;
+}
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    background-image: linear-gradient(to bottom right, #1E2852, black);
+}
+
+/* Make the images invisible by default */
+.Containers {
+    display: none;
+}
+
+/* forward & Back buttons */
+.Back, .forward {
+    cursor: pointer;
+    position: absolute;
+    top: 48%;
+    width: auto;
+    margin-top: -23px;
+    padding: 17px;
+    color: grey;
+    font-weight: bold;
+    font-size: 19px;
+    transition: 0.4s ease;
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+}
+
+/* Place the "forward button" to the right */
+.forward {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+/*when the user hovers,add a black background with some little opacity */
+.Back:hover, .forward:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption Info */
+.Info {
+    color: #e3e3e3;
+    font-size: 16px;
+    padding: 10px 14px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Worknumbering (1/3 etc) */
+.MessageInfo {
+    color: #f2f2f3;
+    font-size: 14px;
+    padding: 10px 14px;
+    position: absolute;
+    top: 0;
+}
+
+/* The circles or bullets and indicators */
+.dots {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin: 0 3px;
+    background-color: #acc;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+}
+
+.enable, .dots:hover {
+    background-color: #717161;
+}
+
+/* Faint animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.4s;
+    animation-name: fade;
+    animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .5}
+    to {opacity: 2}
+}
+
+@keyframes fade {
+    from {opacity: .5}
+    to {opacity: 2}
+}
+
+@media only screen and (max-width: 1400px) {
+    .sk{
+        width: auto;
+        height: auto;
+    }
+}
+@media (max-width: 600px) {
+    #ostalo h1{
+        font-size: x-large;
+    }
+    #ostalo p{
+        font-size: small;
+    }
+}
+@media (max-width: 400px) {
+    #fanrewards  a{
+        font-size: medium;
+    }
+}
+@media (max-width: 1000px) {
+    #fanrewards{
+        height: 350px;
+    }
+}

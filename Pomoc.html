@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script charset="utf-8" src=""></script>
+    <link rel="stylesheet" href="css/Pomoc.css" />
+</head>
+
+<body>
+<nav class="navbar">
+    <!-- LOGO -->
+    <div class="logo"><img src="media/logo.png" alt="Logo" style="width:10em; height:4em;"></div>
+    <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+        <!-- USING CHECKBOX HACK -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <!-- NAVIGATION MENUS -->
+        <div class="menu">
+            <li><a href="index.html">Početna stranica</a></li>
+            <li><a href="RocketPass.html">Rocket Pass</a></li>
+            <li><a href="DLC.html">DLC</a></li>
+            <li><a href="ESports.html">Esports</a></li>
+            <li><a href="Vijesti.html">Vijesti</a></li>
+            <li><a href="SideSwipe.html">SideSwipe</a></li>
+            <li><a href="Pomoc.html">Pomoć</a></li>
+            <li class="buy-game" onclick="document.getElementById('drop').style.display='block'">
+                <p>Kupi</p>
+                <!-- DROPDOWN MENU -->
+                <ul class="dropdown" id="drop">
+                    <li><a href="https://www.epicgames.com/store/en-US/p/rocket-league">Epic Games </a></li>
+                    <li><a href="https://store.playstation.com/en-us/product/UP2002-CUSA01163_00-ROCKETLEAGUENA01/">PlayStation</a></li>
+                    <li><a href="https://www.microsoft.com/hr-hr/p/rocket-league/c125w9bg2k0v?rtc=1&activetab=pivot:overviewtab">Microsoft</a></li>
+                    <li><a href="https://www.nintendo.com/games/detail/rocket-league-switch/">Nintendo</a></li>
+                </ul>
+            </li>
+        </div>
+    </ul>
+</nav>
+
+<div class="glavno">
+    <div class="naslov">
+        <h1>Pomoć</h1>
+    </div>
+    <div class="form">
+        <form>
+            <label for="fname">Ime*</label>
+            <input type="text" id="fname" name="Vaše ime" placeholder="Vaše ime..">
+            <label for="lname">Ime u igrici*</label>
+            <input type="text" id="lname" name="Vaše ime u igrici" placeholder="Vaše ime u igrici..">
+            <label for="email">Email*</label>
+            <input type="text" id="email" name="Vaš email" placeholder="Vaš email..">
+            <label for="game">Igrica*</label>
+            <select id="game" name="game">
+                <option value="sideswipe">Rocket League Sideswipe</option>
+                <option value="konz">Rocket League konzola</option>
+                <option value="rac">Rocket League računalo</option>
+            </select>
+            <label for="opis">Opis problema*</label>
+            <textarea id="opis" name="subject" placeholder="Opišite problem.." style="height:170px"></textarea>
+            <input type="button" value="Podnesi" onclick="fun()">
+        </form>
+        <div class="popup">
+            <p id="text"></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    let fname;
+    let uname;
+    let game;
+    let opis;
+    let email;
+    function fun(){
+        fname = document.getElementById('fname').value;
+        uname = document.getElementById('lname').value;
+        game = document.getElementById('game').value;
+        opis = document.getElementById('opis').value;
+        email = document.getElementById('email').value;
+        if (fname == "" || uname == "" || game == "" || opis == "" || email == ""){
+            document.getElementById('text').innerHTML = "Niste popunili sva polja."
+        }
+        else {
+            document.getElementById('text').innerHTML = fname + " vaš zahtjev je zaprimljen."
+        }
+    }
+</script>
+
+
+<div class="footer-basic">
+    <footer>
+        <ul class="list-inline">
+            <li style="display: inline-block"><a href="sidepage/contactus.html">Contact us</a></li>
+            <li style="display: inline-block"><a href="sidepage/EULA.html">EULA</a></li>
+            <li style="display: inline-block"><a href="sidepage/codeofconduct.html">Code of conduct</a></li>
+            <li style="display: inline-block"><a href="sidepage/termsofuse.html">Terms</a></li>
+            <li style="display: inline-block"><a href="sidepage/privacypolicy.html">Privacy Policy</a></li>
+        </ul>
+        <br><br>
+        <div class="social">
+            <a href="https://www.instagram.com/rocketleague/"><i class="icon ion-social-instagram"></i></a>
+            <a href="https://www.twitch.tv/directory/game/Rocket%20League"><i class="icon ion-social-twitch"></i></a>
+            <a href="https://twitter.com/rocketleague"><i class="icon ion-social-twitter"></i></a>
+            <a href="https://www.facebook.com/RocketLeague"><i class="icon ion-social-facebook"></i></a>
+            <a href="https://www.reddit.com/r/RocketLeague/"><i class="icon ion-social-reddit"></i></a>
+        </div>
+        <div class="platform">
+            <img class="simbol" src="media/Epic_Games_logo.svg">
+            <img class="simbol" src="media/playstation-logo.png">
+            <img class="simbol" src="media/Switch-Logo.png">
+            <img class="simbol" src="media/xbox-logo.png">
+        </div>
+        <div class="platform">
+            <img style="height: 80px; width: 100px;" src="media/Psyonix-Logo.png">
+            <p class="copyright">Dominik Fabijančić © 2022</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

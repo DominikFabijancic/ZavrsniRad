@@ -1,0 +1,799 @@
+/* pocetak nav bar */
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: cursive;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+/* NAVBAR STYLING STARTS */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-image: linear-gradient(to bottom right, black, #1E2852);
+    color: #fff;
+}
+.nav-links a {
+    color: #fff;
+}
+/* LOGO */
+.logo {
+
+}
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+.menu li:hover {
+    background-color: #1E2852;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+.menu li {
+    padding: 2px 14px;
+}
+/* DROPDOWN MENU */
+.buy-game {
+    position: relative;
+    background: orangered;
+    color: #182141;
+    transition: right 0.25s ease-in-out;
+}
+.buy-game:focus-within .dropdown{
+    opacity: 1;
+    display: block;
+}
+
+.dropdown {
+    background-image: linear-gradient(to bottom right, #1E2852, black);
+    padding: 1em 0;
+    position: absolute; /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 8px;
+    top: 25px;
+    right: 0px;
+    z-index: 1;
+}
+.dropdown li + li {
+    margin-top: 10px;
+}
+.dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+}
+.dropdown li:hover {
+    background-color: #1E2852;
+}
+.buy-game:hover .dropdown {
+    display: block;
+
+}
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+    display: none;
+}
+/*HAMBURGER MENU*/
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 960px) {
+    .menu {
+        display:none;
+        position: absolute;
+        background-color:#182141;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+        z-index: 5;
+    }
+    .menu li:hover {
+        display: inline-block;
+        background-color:#1E2852;
+        transition: 0.3s ease;
+    }
+    .menu li + li {
+        margin-top: 12px;
+    }
+    input[type=checkbox]:checked ~ .menu{
+        display: block;
+    }
+    .hamburger {
+        display: block;
+    }
+    .buy-game:hover .dropdown {
+        display: block;
+
+    }
+    .dropdown {
+        left: 40%;
+        top: 20px;
+        transform: translateX(35%);
+        right: 0px;
+        z-index: 10;
+    }
+    .dropdown li:hover {
+        background-color: #1E2852;
+    }
+}
+/* kraj nav bar */
+
+/*footer*/
+.footer-basic {
+    padding:40px 0;
+    background-image: linear-gradient(to bottom right, #1E2852, black);
+    color: white;
+    position: relative;
+}
+
+.footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+}
+
+.footer-basic li {
+    padding:0 10px;
+}
+
+.footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+    opacity:1;
+}
+
+.footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+}
+.footer-basic .platform > img {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+}
+.footer-basic .platform {
+    text-align:center;
+    padding-bottom:15px;
+}
+.footer-basic .simbol {
+    width: 6%;
+    height: 6%;
+}
+.footer-basic .social > a:hover {
+    opacity:0.9;
+}
+
+.footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+}
+
+/* zavrsetak footer*/
+@font-face {
+    font-family: ethno;
+    src: url('../media/ethnocentric_rg.otf');
+}
+
+
+#main-img{
+    width: 100%;
+    height: 1876px;
+    position: relative;
+    background: url('../media/rl-sideswipe-img.jpg') center center scroll no-repeat;
+    background-size: cover;
+}
+.mobile{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    height: 120px;
+    z-index: 10;
+}
+#row .prazno{
+    width: 10%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+}
+#row #android{
+    width: 20%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    background-image: url("../media/google-play.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+#row #ios{
+    width: 20%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    background-image: url("../media/app-store.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+#row #galaxy{
+    width: 20%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    background-image: url("../media/galaxy-store.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.expand:hover{
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transition: transform .5s ease;
+}
+
+
+body{
+    background-image: linear-gradient(to bottom right, #1E2852, black);
+}
+
+.parent{
+    width: 86%;
+    height: 45%;
+    top: 65%;
+    margin-left: 7%;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-template-rows: 1fr;
+    grid-column-gap: 2%;
+    grid-row-gap: 20px;
+}
+.grid-item{
+    text-align: center;
+    width: 100%;
+    height: 500px;
+    background-image: linear-gradient(to bottom right, #1E2852, black);
+    cursor: pointer;
+}
+.item{
+    position: relative;
+
+}
+.item h1{
+    font-family: ethno;
+    color: white;
+    font-size: 20px;
+}
+.img{
+    height: 70%;
+    position: relative;
+}
+#img1{
+    background: url('../media/rl-elcs1.webp') center center scroll no-repeat;
+    background-size: cover;
+}
+#img2{
+    background: url('../media/rl-elcs2.webp') center center scroll no-repeat;
+    background-size: cover;
+}
+#img3{
+    background: url('../media/rl-elcs3.webp') center center scroll no-repeat;
+    background-size: cover;
+}
+#more-btn{
+    top: 95%;
+    height: 5%;
+    width: 100%;
+    justify-self: center;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    text-align: center;
+}
+#more-btn a{
+    font-family: ethno;
+    font-size: x-large;
+    color: white;
+    padding: 1em 1.5em;
+    background-image: linear-gradient(to bottom right, #1E2852, black);
+    box-shadow: 0 5px 0 darkred;
+}
+
+#more-btn a:hover{
+    background-image: linear-gradient(to bottom right, darkred, black);
+    color: white;
+}
+
+
+.parent2{
+    width: 80%;
+    height: 5%;
+    top: 50%;
+    margin-left: 10%;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 26.6% 26.6% 26.6%;
+    grid-template-rows: 1fr;
+    grid-column-gap: 10%;
+    grid-row-gap: 20px;
+}
+.grid-item2{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.item2{
+    position: relative;
+
+}
+.item2 h1{
+    font-family: ethno;
+    color: white;
+    font-size: 20px;
+}
+.img2{
+    height: 100%;
+    position: relative;
+}
+#img4{
+    background-image: url('../media/google-play.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#img5{
+    background-image: url('../media/app-store.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#img6{
+    background-image: url('../media/galaxy-store.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.grid-item2:hover{
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transition: transform .5s ease;
+}
+
+
+body{
+    background-image: linear-gradient(to bottom right, #1E2852, black);
+}
+
+
+#rl-info{
+    height: 720px;
+    width: 100%;
+    background-color: cornflowerblue;
+    z-index: 1;
+    position: relative;
+}
+
+#rl-info .left-part{
+    width: 30%;
+    right: 0%;
+    position: absolute;
+    height: 100%;
+    border-left: orange;
+    border-left-style: solid;
+    border-width: thick;
+    background-size: cover;
+    text-align: center;
+}
+#rl-info .left-part h1{
+    position: relative;
+    text-align: center;
+    font-family: ethno;
+    color: white;
+    font-size: xx-large;
+    top: 10%;
+    margin: 5%;
+}
+
+#rl-info .left-part p{
+    position: relative;
+    text-align: center;
+    font-family: ethno;
+    color: white;
+    font-size: x-large;
+    margin: 5%;
+    top: 20%;
+}
+
+#rl-info .right-part{
+    width: 70%;
+    right: 30%;
+    background: url("../media/sideswipe-gameplay2.webp") center center no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    border-left-style: solid;
+    border-width: thick;
+
+}
+
+#rl-costom{
+    height: 720px;
+    width: 100%;
+    background-color: orange;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+}
+
+#rl-costom .left-part{
+    width: 30%;
+    right: 70%;
+    position: absolute;
+    height: 100%;
+    border-right: cornflowerblue;
+    border-right-style: solid;
+    border-width: thick;
+    background-size: cover;
+}
+#rl-costom .left-part h1{
+    position: relative;
+    text-align: center;
+    font-family: ethno;
+    color: white;
+    font-size: xx-large;
+    top: 10%;
+}
+
+#rl-costom .left-part p{
+    position: relative;
+    font-family: ethno;
+    color: white;
+    font-size: x-large;
+    width: 100%;
+    top: 20%;
+    text-align: center;
+
+}
+
+#rl-costom .right-part{
+    width: 70%;
+    right: 0%;
+    background: url("../media/sideswipe-costom.webp") center center no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    border-right-style: solid;
+    border-width: thick;
+
+}
+
+
+#rl-online{
+    height: 720px;
+    width: 100%;
+    background-color: cornflowerblue;
+    z-index: 1;
+    position: relative;
+}
+
+#rl-online .left-part{
+    width: 30%;
+    right: 0%;
+    position: absolute;
+    height: 100%;
+    border-left: orange;
+    border-left-style: solid;
+    border-width: thick;
+    background-size: cover;
+    text-align: center;
+}
+#rl-online .left-part h1{
+    position: relative;
+    text-align: center;
+    font-family: ethno;
+    color: white;
+    font-size: xx-large;
+    top: 10%;
+
+}
+
+#rl-online .left-part p{
+    position: relative;
+    font-family: ethno;
+    color: white;
+    font-size: x-large;
+    width: 100%;
+    top: 30%;
+    text-align: center;
+}
+
+#rl-online .right-part{
+    width: 70%;
+    right: 30%;
+    background: url("../media/sideswipe-online.webp") center center no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    border-left-style: solid;
+    border-width: thick;
+
+}
+
+#rl-mods{
+    height: 720px;
+    width: 100%;
+    background-color: orange;
+    z-index: 1;
+    position: relative;
+}
+
+#rl-mods .left-part{
+    width: 30%;
+    right: 70%;
+    position: absolute;
+    height: 100%;
+    border-right: cornflowerblue;
+    border-right-style: solid;
+    border-width: thick;
+    background-size: cover;
+    text-align: center;
+}
+#rl-mods .left-part h1{
+    position: relative;
+    text-align: center;
+    font-family: ethno;
+    color: white;
+    font-size: xx-large;
+    top: 10%;
+}
+
+#rl-mods .left-part p{
+    position: absolute;
+    font-family: ethno;
+    color: white;
+    font-size: x-large;
+    width: 100%;
+    text-align: center;
+    top: 30%;
+}
+
+#rl-mods .right-part{
+    width: 70%;
+    right: 0%;
+    background: url("../media/sideswipe-gameplay.webp") center center no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    border-right-style: solid;
+    border-width: thick;
+
+}
+@media (max-width: 1400px) {
+    .parent2{
+        width: 80%;
+        height: 5%;
+        top: 30%;
+        margin-left: 10%;
+        position: absolute;
+        display: grid;
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 1fr;
+        grid-column-gap: 10%;
+        grid-row-gap: 20px;
+    }
+    .grid-item2{
+        text-align: center;
+        width: 100%;
+        height: 74px;
+        cursor: pointer;
+    }
+
+    .parent{
+        width: 86%;
+        height: 45%;
+        top: 45%;
+        margin-left: 7%;
+        position: absolute;
+        display: grid;
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 1fr;
+        grid-column-gap: 10%;
+        grid-row-gap: 20px;
+    }
+    .grid-item{
+        text-align: center;
+        width: 100%;
+        height: 500px;
+        background-image: linear-gradient(to bottom right, #1E2852, black);
+        cursor: pointer;
+    }
+}
+@media (max-width: 950px) {
+    .parent{
+        width: 80%;
+        height: 45%;
+        top: 40%;
+        margin-left: 10%;
+        position: absolute;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr;
+        grid-column-gap: 10%;
+        grid-row-gap: 20px;
+    }
+    .grid-item{
+        text-align: center;
+        width: 100%;
+        height: 350px;
+        background-image: linear-gradient(to bottom right, #1E2852, black);
+        cursor: pointer;
+    }
+    .parent2 {
+        width: 80%;
+        height: 5%;
+        top: 30%;
+        margin-left: 10%;
+        position: absolute;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr;
+        grid-column-gap: 10%;
+        grid-row-gap: 20px;
+    }
+
+    .grid-item2 {
+        text-align: center;
+        width: 100%;
+        height: 40px;
+        cursor: pointer;
+    }
+    #main-img{
+        height: 2000px;
+    }
+    #more-btn{
+        top: 96%;
+    }
+}
+@media (max-width: 600px) {
+    .item h1{
+        font-size: large;
+    }
+}
+@media (max-width: 500px) {
+    .item h1{
+        font-size: medium;
+    }
+}
+@media (max-width: 350px) {
+    .item h1{
+        font-size: small;
+    }
+}
+@media (max-width: 1090px) {
+    #rl-info .left-part{
+        width: 100%;
+        height: 50%;
+        position: relative;
+        border-left-style: none;
+    }
+    #rl-info .right-part{
+        width: 100%;
+        height: 50%;
+        position: relative;
+        right: 0%;
+    }
+
+    #rl-costom .left-part{
+        width: 100%;
+        height: 50%;
+        position: relative;
+        border-right-style: none;
+        right: 0%;
+    }
+    #rl-costom .right-part{
+        width: 100%;
+        height: 50%;
+        position: relative;
+        right: 0%;
+    }
+
+    #rl-mods .left-part{
+        width: 100%;
+        height: 50%;
+        position: relative;
+        border-right-style: none;
+        right: 0%;
+    }
+    #rl-mods .right-part{
+        width: 100%;
+        height: 50%;
+        position: relative;
+        right: 0%;
+    }
+
+    #rl-online .left-part{
+        width: 100%;
+        height: 50%;
+        position: relative;
+        border-left-style: none;
+    }
+    #rl-online .right-part{
+        width: 100%;
+        height: 50%;
+        position: relative;
+        right: 0%;
+    }
+}
+@media (max-width: 600px) {
+    #rl-online .left-part p{
+        font-size: medium;
+    }
+    #rl-mods .left-part p{
+        font-size: medium;
+    }
+    #rl-costom .left-part p{
+        font-size: medium;
+    }
+    #rl-info .left-part p{
+        font-size: medium;
+    }
+    #rl-online .left-part h1{
+        font-size: large;
+    }
+    #rl-mods .left-part h1{
+        font-size: large;
+    }
+    #rl-costom .left-part h1{
+        font-size: large;
+    }
+    #rl-info .left-part h1{
+        font-size: large;
+    }
+}

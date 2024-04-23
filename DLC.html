@@ -1,0 +1,662 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script charset="utf-8" src=""></script>
+    <link rel="stylesheet" href="css/DLC.css" />
+</head>
+
+<body>
+<nav class="navbar">
+    <!-- LOGO -->
+    <div class="logo"><img src="media/logo.png" alt="Logo" style="width:10em; height:4em;"></div>
+    <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+        <!-- USING CHECKBOX HACK -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <!-- NAVIGATION MENUS -->
+        <div class="menu">
+            <li><a href="index.html">Početna stranica</a></li>
+            <li><a href="RocketPass.html">Rocket Pass</a></li>
+            <li><a href="DLC.html">DLC</a></li>
+            <li><a href="ESports.html">Esports</a></li>
+            <li><a href="Vijesti.html">Vijesti</a></li>
+            <li><a href="SideSwipe.html">SideSwipe</a></li>
+            <li><a href="Pomoc.html">Pomoć</a></li>
+            <li class="buy-game" onclick="document.getElementById('drop').style.display='block'">
+                <p>Kupi</p>
+                <!-- DROPDOWN MENU -->
+                <ul class="dropdown" id="drop">
+                    <li><a href="https://www.epicgames.com/store/en-US/p/rocket-league">Epic Games </a></li>
+                    <li><a href="https://store.playstation.com/en-us/product/UP2002-CUSA01163_00-ROCKETLEAGUENA01/">PlayStation</a></li>
+                    <li><a href="https://www.microsoft.com/hr-hr/p/rocket-league/c125w9bg2k0v?rtc=1&activetab=pivot:overviewtab">Microsoft</a></li>
+                    <li><a href="https://www.nintendo.com/games/detail/rocket-league-switch/">Nintendo</a></li>
+                </ul>
+            </li>
+        </div>
+    </ul>
+</nav>
+
+<div id="Naslov">
+    <h1>Lista svih dodatnih stvari koje mogu biti kupljene</h1>
+</div>
+<div class="margina"></div>
+<div id="Kat1">
+    <h1>Auti</h1>
+</div>
+
+<div id="dis1" class="popup">
+    <div class="iks" onclick="document.getElementById('dis1').style.display = 'none'"></div>
+    <div id="img1"></div>
+    <div class="textPopup">
+        <h1>Afteshock</h1>
+        <p>Vozite obožavateljima omiljeni dinamo nadahnut mlaznjacima, Aftershock i ponovno proživite dane slave originalnih Supersonic Acrobatic Rocket-Powered Battle-Cars, danas!</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="https://store.steampowered.com/app/457195/Rocket_League__Aftershock/?curator_clanid=9036925&curator_listid=43147">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>35 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis2" class="popup">
+    <div class="iks" onclick="document.getElementById('dis2').style.display = 'none'"></div>
+    <div id="img2"></div>
+    <div class="textPopup">
+        <h1>Bat-mobile</h1>
+        <p>Oslobodite vlastitu vladavinu terora s jednim automobilom uz službeni Batmobile Battle-Car iz dugo očekivanog filma Batman protiv Supermana: Zora pravde!</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="https://store.steampowered.com/app/438690/Rocket_League__Batman_v_Superman_Dawn_of_Justice_Car_Pack/?curator_clanid=9036925&curator_listid=43147">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>35 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis3" class="popup">
+    <div class="iks" onclick="document.getElementById('dis3').style.display = 'none'"></div>
+    <div id="img3"></div>
+    <div class="textPopup">
+        <h1>Back to the future</h1>
+        <p>Proslavite jedan od najiščekivanijih dana u posljednjih 30 godina u Rocket League uz službeni Povratak u budućnost™ DeLorean Time Machine!
+
+            Ne gubite više minuta. Nabavite svoje danas!</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="https://store.steampowered.com/app/405170/Rocket_League__Back_to_the_Future_Car_Pack/?curator_clanid=9036925&curator_listid=43147">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>35 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis4" class="popup">
+    <div class="iks" onclick="document.getElementById('dis4').style.display = 'none'"></div>
+    <div id="img4"></div>
+    <div class="textPopup">
+        <h1>Dodge Charger</h1>
+        <p>Krstarite terenom s Dodge® Charger R/T iz 1970 od Dom Toretto iz Universal Pictures', The Fast and the Furious™.</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="https://store.steampowered.com/app/675280/Rocket_League__Fast__Furious_70_Dodge_Charger_RT/?curator_clanid=9036925&curator_listid=43147">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>35 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis5" class="popup">
+    <div class="iks" onclick="document.getElementById('dis5').style.display = 'none'"></div>
+    <div id="img5"></div>
+    <div class="textPopup">
+        <h1>Esper</h1>
+        <p>Preuzet s ulica ne tako daleke budućnosti Japana, Esper kombinira roadster i motocikl za najbolju vožnju u apokalipsi!</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="https://store.steampowered.com/app/457196/Rocket_League__Esper/?curator_clanid=9036925&curator_listid=43147">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>35 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis6" class="popup">
+    <div class="iks" onclick="document.getElementById('dis6').style.display = 'none'"></div>
+    <div id="img6"></div>
+    <div class="textPopup">
+        <h1>Ghost Buster</h1>
+        <p>Ikonični Ecto-1 iz Ghostbustersa spreman je poslužiti svim vašim potrebama eliminacije nadnaravnog. Dominirajte i nad duhovima i protiv svojih protivnika.</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="https://rocketleague.fandom.com/wiki/Ecto-1">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>35 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis7" class="popup">
+    <div class="iks" onclick="document.getElementById('dis7').style.display = 'none'"></div>
+    <div id="img7"></div>
+    <div class="textPopup">
+        <h1>Jurassic</h1>
+        <p>"Moram ići brže!" Proslavite vrijeme kada su dinosauri vladali Zemljom dok su postizali golove vrijedne epohe s Jurassic Jeep® Wranglerom.</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="https://store.steampowered.com/app/838770/Rocket_League__Jurassic_World_Car_Pack/?curator_clanid=9036925&curator_listid=43147">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>35 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis8" class="popup">
+    <div class="iks" onclick="document.getElementById('dis8').style.display = 'none'"></div>
+    <div id="img8"></div>
+    <div class="textPopup">
+        <h1>Knight rider</h1>
+        <p>Sjenoviti let u Rocket League! Knight Industries izradio je vlastiti K.I.T.T. 2000. kako bi zagovarao golove iz zraka i epske obrane.</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="https://store.steampowered.com/app/772150/Rocket_League__DC_Super_Heroes_DLC_Pack/?curator_clanid=9036925&curator_listid=43147">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>35 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis9" class="popup">
+    <div class="iks" onclick="document.getElementById('dis9').style.display = 'none'"></div>
+    <div id="img9"></div>
+    <div class="textPopup">
+        <h1>Marauder</h1>
+        <p>Budući da ste to zahtijevali, klasik iz Supersonic Acrobatic Rocket Powered Battle-Cars, monstruozni Marauder, vraća se na teren!</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="https://store.steampowered.com/app/457198/Rocket_League__Marauder/?curator_clanid=9036925&curator_listid=43147">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>35 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis10" class="popup">
+    <div class="iks" onclick="document.getElementById('dis10').style.display = 'none'"></div>
+    <div id="img10"></div>
+    <div class="textPopup">
+        <h1>Masamune</h1>
+        <p>Iskoristite znanost o aerodinamici i prođite kroz natjecanje s Masamuneom, vrhunskim trkačem s ulica Neo Tokija!</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="https://store.steampowered.com/app/457197/Rocket_League__Masamune/?curator_clanid=9036925&curator_listid=43147">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>35 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis11" class="popup">
+    <div class="iks" onclick="document.getElementById('dis11').style.display = 'none'"></div>
+    <div id="img11"></div>
+    <div class="textPopup">
+        <h1>Mclaren</h1>
+        <p>Natječite se s vrhunskim, modernim sportskim automobilom u Rocket League! McLaren 570S Car Pack dizajniran je da vas  oduševi fuzijom dizajna visoke klase i luksuze</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="https://store.steampowered.com/app/943740/Rocket_League__McLaren_570S_Car_Pack/?curator_clanid=9036925&curator_listid=43147">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>35 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis12" class="popup">
+    <div class="iks" onclick="document.getElementById('dis12').style.display = 'none'"></div>
+    <div id="img12"></div>
+    <div class="textPopup">
+        <h1>Nissan R34</h1>
+        <p>"Kontrolirajte Nissan Skyline GT-R R34 Briana O'Connera iz 1999. iz 2 Fast 2 Furious™ od Universal Pictures!"</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="https://store.steampowered.com/app/457192/Rocket_League___The_Fate_of_the_Furious_Ice_Charger/?curator_clanid=9036925&curator_listid=43147">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>35 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis13" class="popup">
+    <div class="iks" onclick="document.getElementById('dis13').style.display = 'none'"></div>
+    <div id="img13"></div>
+    <div class="textPopup">
+        <h1>Proteus</h1>
+        <p>Iz najmračnijih kopna oceana dolazi Proteus, impozantni dubokomorski ronilac izgrađen da izdrži pritisak!</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="https://store.steampowered.com/app/457160/Rocket_League__Proteus/?curator_clanid=9036925&curator_listid=43147">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>35 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis14" class="popup">
+    <div class="iks" onclick="document.getElementById('dis14').style.display = 'none'"></div>
+    <div id="img14"></div>
+    <div class="textPopup">
+        <h1>Skull</h1>
+        <p>Preuzmite kontrolu nad terenom s jednim od najomiljenijih hot rodova svih vremena, Hot Wheels® Bone Shaker™!</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="https://store.steampowered.com/app/457194/Rocket_League__Hot_Wheels_Bone_Shaker/?curator_clanid=9036925&curator_listid=43147">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>35 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis15" class="popup">
+    <div class="iks" onclick="document.getElementById('dis15').style.display = 'none'"></div>
+    <div id="img15"></div>
+    <div class="textPopup">
+        <h1>Triton</h1>
+        <p>Zagrlite svog unutarnjeg boga mora i vladajte otvorenim morem s Tritonom, AquaDomeovim najglatkijim podvodnim Battle-Carom!</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="https://store.steampowered.com/app/457190/Rocket_League__Triton/?curator_clanid=9036925&curator_listid=43147">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>35 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis16" class="popup">
+    <div class="iks" onclick="document.getElementById('dis16').style.display = 'none'"></div>
+    <div id="img16"></div>
+    <div class="textPopup">
+        <h1>Vulcan</h1>
+        <p>Branite svemir (i svoju gol liniju) s Vulkanom, najelitnijim sportskim plovilom u galaksiji!</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="https://store.steampowered.com/app/457162/Rocket_League__Vulcan/?curator_clanid=9036925&curator_listid=43147">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>35 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis17" class="popup">
+    <div class="iks" onclick="document.getElementById('dis17').style.display = 'none'"></div>
+    <div id="img17"></div>
+    <div class="textPopup">
+        <h1>DC pack</h1>
+        <p>Doživite vrhunski DC Comics crossover dok dva klasična Bat(tle)-automobila iz The Dark Knight Rises iz 2012. i Batmana iz 1989. dolaze u Rocket League!</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="https://store.steampowered.com/app/772150/Rocket_League__DC_Super_Heroes_DLC_Pack/?curator_clanid=9036925&curator_listid=43147">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>35 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis18" class="popup">
+    <div class="iks" onclick="document.getElementById('dis18').style.display = 'none'"></div>
+    <div id="img18"></div>
+    <div class="textPopup">
+        <h1>Fast & Furious</h1>
+        <p>Krstarite terenom uz Dodge Charger R/T iz 1970. Dodge Chargera od Doma Toretta iz serije Universal Pictures, The Fast and the Furious™.
+        </p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="https://store.steampowered.com/app/675280/Rocket_League__Fast__Furious_70_Dodge_Charger_RT/?curator_clanid=9036925&curator_listid=43147">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>35 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis19" class="popup">
+    <div class="iks" onclick="document.getElementById('dis19').style.display = 'none'"></div>
+    <div id="img19"></div>
+    <div class="textPopup">
+        <h1>Hot Wheels</h1>
+        <p>Proslavite 50. godišnjicu Hot Wheels® s tri elegantna i moćna ulična stroja: Gazella GT™, MR11 i FAST 4WD!</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="https://store.steampowered.com/app/910940/Rocket_League__Hot_Wheels_Triple_Threat_DLC_Pack/?curator_clanid=9036925&curator_listid=43147">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>35 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis20" class="popup">
+    <div class="iks" onclick="document.getElementById('dis20').style.display = 'none'"></div>
+    <div id="img20"></div>
+    <div class="textPopup">
+        <h1>Triple treat</h1>
+        <p>Pokreće ga ne jedan, već DVA motora s velikim blokom i dvostrukim prednjim usisnicima, Hot Wheels® svjetski poznati Twin Mill™ III je stigao!</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="https://store.steampowered.com/app/910940/Rocket_League__Hot_Wheels_Triple_Threat_DLC_Pack/?curator_clanid=9036925&curator_listid=43147">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>35 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis21" class="popup">
+    <div class="iks" onclick="document.getElementById('dis21').style.display = 'none'"></div>
+    <div id="img21"></div>
+    <div class="textPopup">
+        <h1>1 Ključ</h1>
+        <p>U igri dobite 1 ključ za otključavanje kutija.</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="sidepage/Problem.html">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>15 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis22" class="popup">
+    <div class="iks" onclick="document.getElementById('dis22').style.display = 'none'"></div>
+    <div id="img22"></div>
+    <div class="textPopup">
+        <h1>5 Ključeva</h1>
+        <p>U igri dobite 5 ključeva za otključavanje kutija.</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="sidepage/Problem.html">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>50 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis23" class="popup">
+    <div class="iks" onclick="document.getElementById('dis23').style.display = 'none'"></div>
+    <div id="img23"></div>
+    <div class="textPopup">
+        <h1>10 Ključeva</h1>
+        <p>U igri dobite 10 ključeva za otključavanje kutija.</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="sidepage/Problem.html">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>105 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="dis24" class="popup">
+    <div class="iks" onclick="document.getElementById('dis24').style.display = 'none'"></div>
+    <div id="img24"></div>
+    <div class="textPopup">
+        <h1>20 Ključeva</h1>
+        <p>U igri dobite 10 ključeva za otključavanje kutija.</p>
+    </div>
+    <div class="inline">
+        <div class="buy-btn">
+            <a href="sidepage/Problem.html">Kupi</a>
+        </div>
+        <div class="izmedu"></div>
+        <div class="cijena">
+            <h1>205 Kn</h1>
+        </div>
+    </div>
+</div>
+<div id="auti">
+    <div id="parent1" class="parent">
+        <div class="grid-item" onclick="document.getElementById('dis1').style.display = 'block'">
+            <div class="img-grid" id="auto1"></div>
+            <div class="text-grid">
+                <h1>Aftershock</h1>
+            </div>
+        </div>
+        <div class="grid-item" onclick="document.getElementById('dis2').style.display = 'block'">
+            <div class="img-grid" id="auto2"></div>
+            <div class="text-grid">
+                <h1>Bat-mobile</h1>
+            </div>
+        </div>
+        <div class="grid-item" onclick="document.getElementById('dis3').style.display = 'block'">
+            <div class="img-grid" id="auto3"></div>
+            <div class="text-grid">
+                <h1>Back to the future</h1>
+            </div>
+        </div>
+        <div class="grid-item" onclick="document.getElementById('dis4').style.display = 'block'">
+            <div class="img-grid" id="auto4"></div>
+            <div class="text-grid">
+                <h1>Dodge Charger</h1>
+            </div>
+        </div>
+        <div class="grid-item" onclick="document.getElementById('dis5').style.display = 'block'">
+            <div class="img-grid" id="auto5"></div>
+            <div class="text-grid">
+                <h1>Esper</h1>
+            </div>
+        </div>
+        <div class="grid-item" onclick="document.getElementById('dis6').style.display = 'block'">
+            <div class="img-grid" id="auto6"></div>
+            <div class="text-grid">
+                <h1>Ghost Buster</h1>
+            </div>
+        </div>
+        <div class="grid-item" onclick="document.getElementById('dis7').style.display = 'block'">
+            <div class="img-grid" id="auto7"></div>
+            <div class="text-grid">
+                <h1>Jurassic</h1>
+            </div>
+        </div>
+        <div class="grid-item" onclick="document.getElementById('dis8').style.display = 'block'">
+            <div class="img-grid" id="auto8"></div>
+            <div class="text-grid">
+                <h1>Knight Rider</h1>
+            </div>
+        </div>
+        <div class="grid-item" onclick="document.getElementById('dis9').style.display = 'block'">
+            <div class="img-grid" id="auto9"></div>
+            <div class="text-grid">
+                <h1>Marauder</h1>
+            </div>
+        </div>
+        <div class="grid-item" onclick="document.getElementById('dis10').style.display = 'block'">
+            <div class="img-grid" id="auto10"></div>
+            <div class="text-grid">
+                <h1>Masamune</h1>
+            </div>
+        </div>
+        <div class="grid-item" onclick="document.getElementById('dis11').style.display = 'block'">
+            <div class="img-grid" id="auto11"></div>
+            <div class="text-grid">
+                <h1>Mclaren</h1>
+            </div>
+        </div>
+        <div class="grid-item" onclick="document.getElementById('dis12').style.display = 'block'">
+            <div class="img-grid" id="auto12"></div>
+            <div class="text-grid">
+                <h1>Nissan r34</h1>
+            </div>
+        </div>
+        <div class="grid-item" onclick="document.getElementById('dis13').style.display = 'block'">
+            <div class="img-grid" id="auto13"></div>
+            <div class="text-grid">
+                <h1>proteus</h1>
+            </div>
+        </div>
+        <div class="grid-item" onclick="document.getElementById('dis14').style.display = 'block'">
+            <div class="img-grid" id="auto14"></div>
+            <div class="text-grid">
+                <h1>skull</h1>
+            </div>
+        </div>
+        <div class="grid-item" onclick="document.getElementById('dis15').style.display = 'block'">
+            <div class="img-grid" id="auto15"></div>
+            <div class="text-grid">
+                <h1>triton</h1>
+            </div>
+        </div>
+        <div class="grid-item" onclick="document.getElementById('dis16').style.display = 'block'">
+            <div class="img-grid" id="auto16"></div>
+            <div class="text-grid">
+                <h1>vulcan</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="margina">
+
+</div>
+<div id="btw1">
+    <h1>Svi paketi</h1>
+</div>
+<div id="bundle">
+    <div id="parent2">
+        <div class="grid-item" onclick="document.getElementById('dis17').style.display = 'block'">
+            <div class="img-grid" id="dc"></div>
+            <div class="text-grid">
+                <h1>DC pack</h1>
+            </div>
+        </div>
+        <div class="grid-item" onclick="document.getElementById('dis18').style.display = 'block'">
+            <div class="img-grid" id="fif"></div>
+            <div class="text-grid">
+                <h1>Fast & Furious</h1>
+            </div>
+        </div>
+        <div class="grid-item" onclick="document.getElementById('dis19').style.display = 'block'">
+            <div class="img-grid" id="hotwheels"></div>
+            <div class="text-grid">
+                <h1>Hotwheels</h1>
+            </div>
+        </div>
+        <div class="grid-item" onclick="document.getElementById('dis20').style.display = 'block'">
+            <div class="img-grid" id="Tripletreat"></div>
+            <div class="text-grid">
+                <h1>Triple treat</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br>
+<div class="margina"></div>
+<div id="credh">
+    <h1>Ključevi</h1>
+</div>
+<div id="credits">
+    <div id="parent3">
+        <div class="grid-item" onclick="document.getElementById('dis21').style.display = 'block'">
+            <div class="img-grid" id="kl1"></div>
+            <div class="text-grid">
+                <h1>1 ključ</h1>
+            </div>
+        </div>
+        <div class="grid-item" onclick="document.getElementById('dis22').style.display = 'block'">
+            <div class="img-grid" id="kl5"></div>
+            <div class="text-grid">
+                <h1>5 ključa</h1>
+            </div>
+        </div>
+        <div class="grid-item" onclick="document.getElementById('dis23').style.display = 'block'">
+            <div class="img-grid" id="kl10"></div>
+            <div class="text-grid">
+                <h1>10 ključa</h1>
+            </div>
+        </div>
+        <div class="grid-item" onclick="document.getElementById('dis24').style.display = 'block'">
+            <div class="img-grid" id="kl20"></div>
+            <div class="text-grid">
+                <h1>20 ključa</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+<div class="footer-basic">
+    <footer>
+        <ul class="list-inline">
+            <li style="display: inline-block"><a href="sidepage/contactus.html">Contact us</a></li>
+            <li style="display: inline-block"><a href="sidepage/EULA.html">EULA</a></li>
+            <li style="display: inline-block"><a href="sidepage/codeofconduct.html">Code of conduct</a></li>
+            <li style="display: inline-block"><a href="sidepage/termsofuse.html">Terms</a></li>
+            <li style="display: inline-block"><a href="sidepage/privacypolicy.html">Privacy Policy</a></li>
+        </ul>
+        <br><br>
+        <div class="social">
+            <a href="https://www.instagram.com/rocketleague/"><i class="icon ion-social-instagram"></i></a>
+            <a href="https://www.twitch.tv/directory/game/Rocket%20League"><i class="icon ion-social-twitch"></i></a>
+            <a href="https://twitter.com/rocketleague"><i class="icon ion-social-twitter"></i></a>
+            <a href="https://www.facebook.com/RocketLeague"><i class="icon ion-social-facebook"></i></a>
+            <a href="https://www.reddit.com/r/RocketLeague/"><i class="icon ion-social-reddit"></i></a>
+        </div>
+        <div class="platform">
+            <img class="simbol" src="media/Epic_Games_logo.svg">
+            <img class="simbol" src="media/playstation-logo.png">
+            <img class="simbol" src="media/Switch-Logo.png">
+            <img class="simbol" src="media/xbox-logo.png">
+        </div>
+        <div class="platform">
+            <img style="height: 80px; width: 100px;" src="media/Psyonix-Logo.png">
+            <p class="copyright">Dominik Fabijančić © 2022</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,728 @@
+/* pocetak nav bar */
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: cursive;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+/* NAVBAR STYLING STARTS */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-image: linear-gradient(to bottom right, black, #1E2852);
+    color: #fff;
+}
+.nav-links a {
+    color: #fff;
+}
+/* LOGO */
+.logo {
+
+}
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+.menu li:hover {
+    background-color: #1E2852;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+.menu li {
+    padding: 2px 14px;
+}
+/* DROPDOWN MENU */
+.buy-game {
+    position: relative;
+    background: orangered;
+    color: #182141;
+    transition: right 0.25s ease-in-out;
+}
+.buy-game:focus-within .dropdown{
+    opacity: 1;
+    display: block;
+}
+
+.dropdown {
+    background-image: linear-gradient(to bottom right, #1E2852, black);
+    padding: 1em 0;
+    position: absolute; /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 8px;
+    top: 25px;
+    right: 0px;
+    z-index: 1;
+}
+.dropdown li + li {
+    margin-top: 10px;
+}
+.dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+}
+.dropdown li:hover {
+    background-color: #1E2852;
+}
+.buy-game:hover .dropdown {
+    display: block;
+
+}
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+    display: none;
+}
+/*HAMBURGER MENU*/
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 960px) {
+    .menu {
+        display:none;
+        position: absolute;
+        background-color:#182141;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+        z-index: 5;
+    }
+    .menu li:hover {
+        display: inline-block;
+        background-color:#1E2852;
+        transition: 0.3s ease;
+    }
+    .menu li + li {
+        margin-top: 12px;
+    }
+    input[type=checkbox]:checked ~ .menu{
+        display: block;
+    }
+    .hamburger {
+        display: block;
+    }
+    .buy-game:hover .dropdown {
+        display: block;
+
+    }
+    .dropdown {
+        left: 40%;
+        top: 20px;
+        transform: translateX(35%);
+        right: 0px;
+        z-index: 10;
+    }
+    .dropdown li:hover {
+        background-color: #1E2852;
+    }
+}
+/* kraj nav bar */
+
+/*footer*/
+.footer-basic {
+    padding:40px 0;
+    background-image: linear-gradient(to bottom right, #1E2852, black);
+    color: white;
+    position: relative;
+}
+
+.footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+}
+
+.footer-basic li {
+    padding:0 10px;
+}
+
+.footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+    opacity:1;
+}
+
+.footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+}
+.footer-basic .platform > img {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+}
+.footer-basic .platform {
+    text-align:center;
+    padding-bottom:15px;
+}
+.footer-basic .simbol {
+    width: 6%;
+    height: 6%;
+}
+.footer-basic .social > a:hover {
+    opacity:0.9;
+}
+
+.footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+}
+
+/* zavrsetak footer*/
+
+.image-container {
+    width: 100%;
+    position: relative;
+    min-height: 100%;
+    height: 1600px;
+    background-image: url("../media/background.png");
+    background-size: cover;
+}
+.uvod {
+    width: 100%;
+    height: 10%;
+    position: relative;
+    background: url("../media/space-background.jpg") center center scroll no-repeat;
+    background-size: cover;
+    color: white;
+
+}
+.uvod-inner{
+    position: center;
+    width: 100%;
+}
+.uvod-inner h1{
+    text-align: center;
+    font-family: ethno;
+    color: cyan;
+    font-size: xx-large;
+}
+.uvod-inner p{
+    text-align: center;
+    font-family: ethno;
+    color: cyan;
+    font-size: medium;
+}
+@media (max-width: 1450px) {
+        .image-container{
+            background: url('../media/background.png') center center scroll no-repeat;
+            /* Currently Firefox requires background-size declared separately or the background image will be blank */
+            background-size: cover;
+        }
+}
+@font-face {
+    font-family: ethno;
+    src: url('../media/ethnocentric_rg.otf');
+}
+
+.modovi{
+    position: relative;
+    width: 100%;
+    height: 540px;
+    background: url('../media/rl-modes.jpg') center center scroll no-repeat;
+    background-size: cover;
+}
+.black-desno{
+    width: 50%;
+    right: 0%;
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    height: 100%;
+    border-left: orangered;
+    border-left-style: solid;
+    border-width: thick;
+}
+.black-ljevo{
+    width: 50%;
+    right: 49.7%;
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    height: 100%;
+    border-right: orangered;
+    border-right-style: solid;
+    border-width: thick;
+}
+.txt h1{
+    position: relative;
+    text-align: center;
+    font-family: ethno;
+    color: cyan;
+    font-size: xx-large;
+}
+.txt p{
+    position: relative;
+    font-family: ethno;
+    color: cyan;
+    font-size: large;
+    width: 100%;
+}
+#container-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#content{
+    flex: auto auto;
+    width: 80%;
+    position: relative;
+}
+#container-center2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#content2{
+    flex: auto auto;
+    width: 80%;
+    position: relative;
+}
+#container-center3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#content3{
+    flex: auto auto;
+    width: 80%;
+    position: relative;
+}
+#container-center4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#content4{
+    flex: auto auto;
+    width: 80%;
+    position: relative;
+}
+#container-center5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#content5{
+    flex: auto auto;
+    width: 80%;
+    position: relative;
+}
+#content div{
+
+}
+.link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 4em;
+    width: 100%;
+    position: relative;
+}
+.link a{
+    background-color: orangered;
+    box-shadow: 0 5px 0 darkred;
+    color: white;
+    padding: 1em 1.5em;
+    position: relative;
+    text-decoration: none;
+    font-family: ethno;
+    text-transform: uppercase;
+}
+.link a:hover{
+    background-color: red;
+    cursor: pointer;
+}
+.link a:active{
+    box-shadow: none;
+    top: 5px;
+}
+@media (max-width: 782px) {
+    .modovi{
+        height: 540px;
+    }
+}
+
+.link2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 4em;
+    width: 100%;
+    position: relative;
+}
+.link2 a{
+    background-color: #1DB954;
+    box-shadow: 0 5px 0 #093719;
+    color: #191414;
+    padding: 1em 1.5em;
+    position: relative;
+    text-decoration: none;
+    font-family: ethno;
+    text-transform: uppercase;
+}
+.link2 a:hover{
+    background-color: #093719;
+    cursor: pointer;
+}
+.link2 a:active{
+    box-shadow: none;
+    top: 5px;
+}
+.link3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 4em;
+    width: 100%;
+    position: relative;
+}
+.link3 a{
+    background-color: orange;
+    box-shadow: 0 5px 0 dodgerblue;
+    color: white;
+    padding: 1em 1.5em;
+    position: relative;
+    text-decoration: none;
+    font-family: ethno;
+    text-transform: uppercase;
+}
+.link3 a:hover{
+    background-color: dodgerblue;
+    cursor: pointer;
+}
+.link3 a:active{
+    box-shadow: none;
+    top: 5px;
+}
+
+.costom{
+    position: relative;
+    width: 100%;
+    height: 540px;
+    background: url('../media/rl-costom.jpg') center center scroll no-repeat;
+    background-size: cover;
+}
+.music{
+    position: relative;
+    width: 100%;
+    height: 720px;
+    background: url('../media/rl-music.jpg') center center scroll no-repeat;
+    background-size: cover;
+}
+.side-swipe{
+    position: relative;
+    width: 100%;
+    height: 720px;
+    background: url('../media/rl-sideswipe.jpg') center center scroll no-repeat;
+    background-size: cover;
+}
+.mehanike{
+    position: relative;
+    width: 100%;
+    height: 720px;
+    background: url('../media/rl-gameplay.jpg') center center scroll no-repeat;
+    background-size: cover;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 0px;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.div2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.item1{
+    justify-self: center;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    width: 80%;
+    height: 50%;
+    top: 25%;
+    left: 10%;
+    background: url('../media/rl-rcpass.jpg') center center scroll no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.item2{
+    justify-self: center;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    width: 80%;
+    height: 50%;
+    top: 25%;
+    left: 10%;
+    background: url('../media/rl-season5.jpg') center center scroll no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.item1 h1{
+    bottom: -10%;
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+    right: 0%;
+    background-color: #182141;
+    width: 100%;
+    padding: 2%;
+    color: white;
+    font-family: ethno;
+}
+.item2 h1{
+    bottom: -10%;
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+    right: 0%;
+    background-color: #182141;
+    width: 100%;
+    padding: 2%;
+    color: white;
+    font-family: ethno;
+}
+
+.item1:hover{
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transition: transform .5s ease;
+}
+
+.item2:hover{
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transition: transform .5s ease;
+}
+@media (max-width: 1420px) {
+    .parent{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 50px;
+        height: 80%;
+    }
+    .item1{
+        justify-self: center;
+        justify-content: center;
+        align-content: center;
+        position: relative;
+        width: 80%;
+        height: 90%;
+        top: 0%;
+        left: 10%;
+        background: url('../media/rl-rcpass.jpg') center center scroll no-repeat;
+        background-size: cover;
+        cursor: pointer;
+    }
+    .item2{
+        justify-self: center;
+        justify-content: center;
+        align-content: center;
+        position: relative;
+        width: 80%;
+        height: 90%;
+        top: 0%;
+        left: 10%;
+        background: url('../media/rl-season5.jpg') center center scroll no-repeat;
+        background-size: cover;
+        cursor: pointer;
+    }
+    .item1 h1{
+        bottom: -10%;
+        position: absolute;
+        text-align: center;
+        z-index: 2;
+        right: 0%;
+        background-color: #182141;
+        width: 100%;
+        padding: 2%;
+        color: white;
+        font-family: ethno;
+        font-size: xx-large;
+    }
+    .item2 h1{
+        bottom: -10%;
+        position: absolute;
+        text-align: center;
+        z-index: 2;
+        right: 0%;
+        background-color: #182141;
+        width: 100%;
+        padding: 2%;
+        color: white;
+        font-family: ethno;
+        font-size: xx-large;
+    }
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 2 / 1 / 3 / 2; }
+}
+
+@media (max-width: 620px) {
+    .item1 h1{
+        font-size: large;
+
+    }
+    .item2 h1{
+        font-size: large;
+    }
+    .uvod-inner h1{
+        font-size: xx-large;
+    }
+
+    .uvod-inner p{
+        font-size: large;
+    }
+}
+
+.mehanike-mobile p{
+    font-family: ethno;
+    font-size: medium;
+}
+.mehanike-mobile h1{
+    font-family: ethno;
+    font-size: x-large;
+}
+
+.mehanike-mobile a{
+    font-family: ethno;
+    font-size: x-large;
+    margin-bottom: 20%;
+}
+.mehanike-mobile{
+    background-image: linear-gradient(to bottom right, #1E2852, black);
+    width: 100%;
+    position: relative;
+    height: 100%;
+    display: none;
+    text-align: center;
+    color: cyan;
+}
+@media (max-width: 874px) {
+    .mehanike-mobile{
+        display: block;
+    }
+    .black-desno{
+        display: none;
+        position: relative;
+        width: 0%;
+        border-left-style: none;
+    }
+    .black-desno h1{
+        font-size: 0px;
+    }
+    .black-desno a{
+        font-size: 0px;
+    }
+    .black-desno p{
+        font-size: 0px;
+    }
+    .black-ljevo{
+        display: none;
+        position: relative;
+        border-right-style: none;
+    }
+    .black-ljevo h1{
+        font-size: 0px;
+    }
+    .black-ljevo a{
+        font-size: 0px;
+    }
+    .black-ljevo p{
+        font-size: 0px;
+    }
+    .black-ljevo{
+        display: none;
+        position: relative;
+        border-right-style: none;
+    }
+    .mehanike{
+        background: url('../media/rl-gameplay.jpg') center no-repeat;
+        background-size: cover;
+        height: 540px;
+    }
+    #nemoj1 p{
+        margin-bottom: 10%;
+    }
+    #nemoj2 p{
+        margin-bottom: 10%;
+    }
+    .black-ljevo{
+        background-size: contain;
+    }
+    .modovi{
+        background-size: contain;
+        height: 420px;
+    }
+    .costom{
+        background-size: contain;
+        height: 420px;
+    }
+    .mehanike{
+        background-size: contain;
+        height: 420px;
+    }
+    .music{
+        background-size: contain;
+        height: 420px;
+    }
+    .side-swipe{
+        background-size: contain;
+        height: 420px;
+    }
+}
+body{
+    background-image: linear-gradient(to bottom right, #1E2852, black);
+}
